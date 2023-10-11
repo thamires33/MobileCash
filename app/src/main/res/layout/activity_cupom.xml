@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="2dp"
     android:orientation="vertical">
@@ -19,6 +19,7 @@
             android:id="@+id/hamburgerIcon"
             android:layout_width="wrap_content"
             android:layout_height="34dp"
+            android:layout_marginLeft="5dp"
             android:layout_marginRight="8dp"
             android:src="@drawable/hamburgermenu" />
 
@@ -111,16 +112,28 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
         android:layout_marginTop="30dp"
-        android:text="TextView" />
+        android:fontFamily="sans-serif-black"
+        android:text="Cupons"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
         android:id="@+id/textView8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:text="TextView" />
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="25dp"
+        android:text="Favoritos"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+    <ImageView
+        android:id="@+id/frame_522"
+        android:layout_width="395dp"
+        android:layout_height="113dp"
+        android:background="@drawable/frame_522"
+        android:clipToOutline="true"
+        android:elevation="20dp" />
 
 
     <!-- Ícone de perfil -->
