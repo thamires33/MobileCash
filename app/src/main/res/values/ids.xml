@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="btnCancelar" type="id" />
+    <item name="btnAceitar" type="id" />
+    <item name="vector" type="id" />
+    <item name="txtCoin" type="id" />
+    <item name="closeButton" type="id" />
+    <item name="txtCbl" type="id" />
+</resources>

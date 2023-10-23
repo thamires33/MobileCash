@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+
+    <!-- Conteúdo principal da atividade -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Toolbar para o Drawer e NavigationView -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <!-- NavigationView para o menu lateral -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:menu="@menu/menu_drawer" />
+
+    <!-- Conteúdo do layout que você forneceu -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_background">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/cashinlogo1" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/btnInicio"
+            android:background="@drawable/rounded_button"
+            android:text="Início" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/btnExtrato"
+            android:text="Extrato" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/btnTransferencias"
+            android:background="@drawable/rounded_button_transferencias"
+            android:text="Transferências" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/btnBoleto"
+            android:background="@drawable/rounded_button_boleto"
+            android:text="Pagar boleto" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/btnCVirtual"
+            android:text="Cartão Virtual" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/btnTCashin"
+            android:text="Transferencias Cashin" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/btnCupons"
+            android:text="Cupons" />
+
+        <Button
+            style="@style/ButtonStyle"
+            android:id="@+id/btnCFisico"
+            android:text="Cartão Físico" />
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

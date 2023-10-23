@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:baselineAligned="false"
+    android:paddingTop="15dp"
+    android:paddingBottom="16dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="16dp">
+
+    <!-- Header Layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:background="#A500B9"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="30dp">
+
+        <TextView
+            android:id="@+id/txtCbl"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="16sp" />
+
+        <!-- Botão de fechar (X) -->
+        <ImageView
+            android:id="@+id/closeButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/x"
+            android:contentDescription="Fechar"
+            android:layout_marginLeft="16dp" />
+
+    </LinearLayout>
+
+    <!-- Espaço entre Header e o texto principal -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Texto Principal -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Oba! Você recebeu cashins!"
+        android:textSize="18sp" />
+
+    <!-- Espaço entre o texto e o ícone -->
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <!-- Layout com Ícone e Texto -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/vector"
+            android:layout_width="350dp"
+            android:layout_height="90dp"
+            android:background="@drawable/circulo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtCoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            app:layout_constraintTop_toTopOf="@+id/vector"
+            app:layout_constraintBottom_toBottomOf="@+id/vector"
+            app:layout_constraintStart_toStartOf="@+id/vector"
+            app:layout_constraintEnd_toEndOf="@+id/vector" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Layout com Botões -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnAceitar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:backgroundTint="#A400B8"
+            android:text="Aceitar"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnCancelar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FEFEFE"
+            android:text="Cancelar"
+            android:textColor="#202020"
+            app:strokeColor="#0B0A0A"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+</LinearLayout>

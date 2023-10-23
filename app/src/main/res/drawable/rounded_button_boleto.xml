@@ -14,7 +14,8 @@
         <shape>
             <solid android:color="#00000000" /> <!-- Cor de fundo transparente -->
             <stroke
-                android:width="2dp" <!-- Largura da linha de contorno -->
+                android:width="2dp"></stroke>
+            <!-- Largura da linha de contorno -->
                 android:color="#00A7E1" /> <!-- Cor do contorno -->
             <corners android:radius="8dp" /> <!-- Raio do canto -->
         </shape>

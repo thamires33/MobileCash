@@ -5,15 +5,12 @@
     android:layout_marginTop="2dp"
     android:orientation="vertical">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center_vertical"
         android:orientation="horizontal">
-
-        <!-- Ícone de moeda -->
 
         <ImageView
             android:id="@+id/hamburgerIcon"
@@ -27,86 +24,68 @@
             android:layout_width="360dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:layout_marginTop="0dp"
             android:background="@drawable/retangulo_redondo">
 
-            <!-- LinearLayout horizontal para os elementos internos -->
-
-            <!-- Linha à esquerda com 2px de espessura e cor A500B9 -->
-            <View
-                android:layout_width="10dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_gravity="start"
-                android:background="#A500B9" />
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="20dp"
-                android:layout_marginTop="10dp"
-                android:src="@drawable/moeda" />
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent"
+                    android:background="#A500B9" />
 
-            <Space
-                android:layout_width="8dp"
-                android:layout_height="32dp" />
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/moeda" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="60dp"
-                android:layout_marginTop="10dp"
-                android:text="R$ 1.000,00"
-                android:textSize="12sp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="R$ 1.000,00"
+                    android:textSize="12sp" />
 
-            <Space
-                android:layout_width="8dp"
-                android:layout_height="32dp" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:text="cashins"
+                    android:textSize="12sp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="135dp"
-                android:layout_marginTop="10dp"
-                android:text="cashins"
-                android:textSize="12sp" />
+                <ImageView
+                    android:id="@+id/notificationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/notificacaoicone" />
 
-            <ImageView
-                android:id="@+id/notificationIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="34dp"
-                android:layout_marginLeft="220dp"
-                android:layout_marginRight="8dp"
-                android:src="@drawable/notificacaoicone" />
+                <ImageView
+                    android:id="@+id/profileIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/perfilicone" />
 
-            <ImageView
-                android:id="@+id/profileIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="34dp"
-                android:layout_marginLeft="270dp"
-                android:layout_marginRight="8dp"
-                android:src="@drawable/perfilicone" />
-
-            <ImageView
-                android:id="@+id/arrowIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="34dp"
-                android:layout_marginLeft="330dp"
-                android:src="@drawable/setaicone" />
-
+                <ImageView
+                    android:id="@+id/arrowIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/setaicone" />
+            </LinearLayout>
         </FrameLayout>
-
-        <!-- Espaçamento de 32dp entre os elementos -->
-
-        <!-- Texto do saldo -->
-
-        <!-- Espaçamento de 32dp entre os elementos -->
-
-        <!-- Texto "cashins" -->
-
     </LinearLayout>
-
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
 
     <TextView
         android:id="@+id/textView7"
@@ -135,8 +114,59 @@
         android:clipToOutline="true"
         android:elevation="20dp" />
 
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="match_parent"
+        android:layout_height="128dp">
 
-    <!-- Ícone de perfil -->
 
-    <!-- Ícone de seta -->
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/abraccio" />
 
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/alphabeto" />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="124dp" >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pizzahut" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/itunes" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="124dp" >
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/pizzahut" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:src="@drawable/itunes" />
+    </TableRow>
+
+
+</LinearLayout>

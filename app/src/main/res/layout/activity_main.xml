@@ -10,47 +10,91 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:id="@+id/menusuperior"
+    <?xml version="1.0" encoding="utf-8"?>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
+        android:layout_height="45dp"
+        android:fitsSystemWindows="true">
 
-        <ImageView
-            android:id="@+id/hamburgerIcon"
+        <!-- Conteúdo principal -->
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <!-- Toolbar para o Drawer e NavigationView -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+        <!-- NavigationView para o menu lateral -->
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/nav_view"
             android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:layout_marginRight="8dp"
-            android:src="@drawable/hamburgermenu" />
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:menu="@layout/activity_drawer"/>
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+        <!-- Seu conteúdo existente aqui -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rounded_background"
+            android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/notificationIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:layout_marginRight="8dp"
-            android:src="@drawable/notificacaoicone" />
+            <LinearLayout
+                android:id="@+id/menusuperior"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
-        <!-- Ícone de perfil -->
-        <ImageView
-            android:id="@+id/profileIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:layout_marginRight="8dp"
-            android:src="@drawable/perfilicone" />
+                <ImageView
+                    android:id="@+id/hamburgerIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/hamburgermenu"
+                    app:layout_collapseMode="pin" />
 
-        <!-- Ícone de seta -->
-        <ImageView
-            android:id="@+id/arrowIcon"
-            android:layout_width="wrap_content"
-            android:layout_height="34dp"
-            android:src="@drawable/setaicone" />
-    </LinearLayout>
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageView
+                    android:id="@+id/notificationIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/notificacaoicone" />
+
+                <!-- Ícone de perfil -->
+                <ImageView
+                    android:id="@+id/profileIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:layout_marginRight="8dp"
+                    android:src="@drawable/perfilicone" />
+
+                <!-- Ícone de seta -->
+                <ImageView
+                    android:id="@+id/arrowIcon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="34dp"
+                    android:src="@drawable/setaicone" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+
+
+
 
     <TextView
         android:id="@+id/welcomeText"
@@ -137,7 +181,7 @@
         android:textStyle="bold" />
 
     <GridLayout
-        android:layout_width="match_parent"
+        android:layout_width="394dp"
         android:layout_height="385dp"
         android:layout_gravity="center"
         android:columnCount="2"
